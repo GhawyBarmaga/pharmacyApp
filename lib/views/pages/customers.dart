@@ -44,7 +44,7 @@ class _CustomersState extends State<CustomersScreen> {
                 );
               }
               return const Center(
-                child: Text("No Customers"),
+                child: Text("No Customers Found"),
               );
             }));
   }
