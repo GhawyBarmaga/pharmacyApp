@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:pharmacy_app/models/menu_details.dart';
-import 'package:pharmacy_app/views/pages/customers.dart';
 
+import '../views/pages/customers_screen.dart';
 import '../views/pages/dashboard.dart';
 import '../views/pages/notifications.dart';
-import '../views/pages/pages.dart';
+import '../views/pages/setting.dart';
 import '../views/pages/reports.dart';
+
 
 class MenuItems {
   List<MenuDetails> items = [
@@ -13,7 +14,7 @@ class MenuItems {
     MenuDetails(
         title: "Customers",
         icon: Icons.person_off_outlined,
-        page: const Customers()),
+        page: const CustomersScreen()),
     MenuDetails(
         title: "Notifications",
         icon: Icons.notification_important_rounded,
