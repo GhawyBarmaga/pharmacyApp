@@ -10,40 +10,40 @@ String customersToJson(Customers data) => json.encode(data.toJson());
 
 class Customers {
     int id;
-    String custname;
+    String custName;
     String custCompny;
-    String creationDate;
+    DateTime creationDate;
     int creadit;
-    int phone;
     String address;
+    String phone;
 
     Customers({
         required this.id,
-        required this.custname,
+        required this.custName,
         required this.custCompny,
         required this.creationDate,
         required this.creadit,
-        required this.phone,
         required this.address,
+        required this.phone,
     });
 
     factory Customers.fromJson(Map<String, dynamic> json) => Customers(
         id: json["id"],
-        custname: json["Custname"],
-        custCompny: json["CustCompny"],
-        creationDate: json["CreationDate"],
-        creadit: json["Creadit"],
-        phone: json["Phone"],
-        address: json["Address"],
+        custName: json["custName"],
+        custCompny: json["custCompny"],
+        creationDate: DateTime.parse(json["creationDate"]),
+        creadit: json["creadit"],
+        address: json["address"],
+        phone: json["phone"],
     );
 
     Map<String, dynamic> toJson() => {
         "id": id,
-        "Custname": custname,
-        "CustCompny": custCompny,
-        "CreationDate": creationDate,
-        "Creadit": creadit,
-        "Phone": phone,
-        "Address": address,
+        "custName": custName,
+        "custCompny": custCompny,
+        "creationDate": creationDate.toIso8601String(),
+        "creadit": creadit,
+        "address": address,
+        "phone": phone,
     };
 }
